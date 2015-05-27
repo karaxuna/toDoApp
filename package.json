@@ -1,0 +1,40 @@
+{
+  "name": "todoApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "startGaston": "./node_modules/.bin/gaston dev",
+    "start": "npm run startGaston",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startHub": "./node_modules/vigour-hub/bin/hub -c directv -d",
+    "prestart": "npm run startHub &",
+    "build": "vNative build",
+    "serve": "packer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vigour-io/todoApp.git"
+  },
+  "author": "Vigour",
+  "dependencies": {
+    "lodash": "3.2.0",
+    "monotonic-timestamp": "0.0.9",
+    "promise": "^7.0.1",
+    "vigour-js": "git+ssh://git@github.com:vigour-io/vigour-js.git#directv"
+  },
+  "devDependencies": {
+    "vigour-hub": "git+ssh://git@github.com:vigour-io/vigour-hub.git#directv",
+    "gaston":"git+ssh://git@github.com:vigour-io/gaston.git#master"
+  },
+  "gaston": {
+    "browserify-transforms": [
+      {
+        "path": "vigour-js/util/inform-transform",
+        "options": {
+          "global": "false"
+        }
+      }
+    ]
+  }
+}
