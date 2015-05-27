@@ -2,8 +2,11 @@ window.package = require('package.json')
 require('./style.less')
 
 var Element = require('vigour-js/app/ui/element')
-var vObj = require('vigour-js/object')
 var timestamp = require('monotonic-timestamp')
+var app = require('vigour-js/app')
+			.inject( require('vigour-js/app/cloud') )
+
+app.cloud = 'localhost:10001'
 
 var Todo = new Element({
 	title: {
@@ -19,7 +22,12 @@ var Todo = new Element({
 	},
 	body: {
 		node:'textarea',
-		text: { data: 'text' }
+		text: { data: 'text' },
+		events: {
+			keyup:function(e) {
+				this.data.set('text', this.node.value)
+			}
+		}
 	},
 	removeButton: {
 		node:'button',
@@ -39,11 +47,8 @@ var TodoList = new Element({
 	}
 }).Class
 
-var app = new Element({
-	node:document.body
-})
-
-var dataObj = window.dataObj = new vObj({})
+//control layer
+var dataObj = window.dataObj = app.cloud.data.get('todos')
 
 app.set({
 	addTodo: {
