@@ -23,10 +23,6 @@
     "promise": "^7.0.1",
     "vigour-js": "git+ssh://git@github.com:vigour-io/vigour-js.git#directv"
   },
-  "devDependencies": {
-    "vigour-hub": "git+ssh://git@github.com:vigour-io/vigour-hub.git#directv",
-    "gaston":"git+ssh://git@github.com:vigour-io/gaston.git#master"
-  },
   "gaston": {
     "browserify-transforms": [
       {
