@@ -12,13 +12,13 @@ Make sure you have the following versions (or higher) installed:
 |npm: | `2.11.0` |
 
 ### Gaston (javaScript bundler)
-Clone gaston and run `npm link` while on `master` branch.
+Clone [gaston](https://github.com/vigour-io/gaston) and run `npm link` while on `master` branch.
 
 ### The Hub (data sync)
-Clone vigour-hub and run `npm install`
+Clone [vigour-hub](https://github.com/vigour-io/vigour-hub) and run `npm install`
 
 ### This app (using vigour-js)
-Clone this repo and run `npm install`
+Clone [this repo](https://github.com/vigour-io/todoApp) and run `npm install`
 
 ## Run the app
 1. Start a Hub: Run `bin/hub` from the vigour-hub root directory.
