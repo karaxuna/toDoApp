@@ -1,7 +1,7 @@
 # todoApp - vigour.js example app
 The goal of this app is to introduce you to the vigour-js framework by creating a little multiscreen app.
 
-## Set up
+## Get set up
 
 ### Node.js and npm
 Make sure you have the following versions (or higher) installed:
