@@ -53,5 +53,36 @@ The parts above and below it have no requirements other than to look like the fi
 - pixel perfect replication of the design
 
 ##### Help
-If you have any questions don't hesitate to contact me (Marcus) on Skype.
+
+###### Setting width based on data:
+In stead of pointing a specific field (`'title'`) or to the entire data Object (`true`), the data field can be passed a `function` to parse the data and return a value accordingly. What follows is a little example showing you how this can be done:
+
+```javascript
+var Element = require('vigour-js/browser/element')
+var vObj = require('vigour-js/object')
+var app = require('vigour-js/app')
+
+var Grower = new Element({
+  node: 'input',
+  w: {
+    data: function(data){
+      console.log('set the width depending on data', data.val)
+      return data.val.length * 10
+    }
+  },
+  text: {data: true},
+  events: {
+    keyup: function(){
+      this.data.val = this.node.value
+    }
+  }
+}).Class
+
+app.set({
+  grower: new Grower({
+    data: new vObj('bur')
+  })
+})
+```
+###### If you have any questions don't hesitate to contact me (Marcus) on Skype.
 
