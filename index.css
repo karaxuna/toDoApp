@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+}
+
+@font-face {
+    font-family: 'dinRegular';
+    src: url('./assets/dinRegular.woff') format('woff');
+}
+
+.din-regular {
+    font-family: 'dinRegular';
+}
+
+@font-face {
+    font-family: 'dinLight';
+    src: url('./assets/dinLight.woff') format('woff');
+}
+
+.din-light {
+    font-family: 'dinLight';
+}
+
+@font-face {
+    font-family: 'dinBold';
+    src: url('./assets/dinBold.woff') format('woff');
+}
+
+.din-bold {
+    font-family: 'dinBold';
+}
+
+
+.poll {
+    background-image: url('./assets/wallpaper_sports.png');
+    background-color: #181818;
+    background-size: cover;
+    padding: 21px 18px 15px;
+}
+
+.poll > .title {
+    font-size: 20px;
+    color: white;
+}
+
+.poll > .participants {
+    
+}
+
+.poll > .participants > div {
+    overflow: hidden;
+    height: 44px;
+    margin-top: 24px;
+}
+
+.poll > .participants > div > .logo {
+    height: 100%;
+    float: left;
+    margin-right: 15px;
+    border-radius: 100%;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+.poll > .participants > div > .statistics {
+    overflow: hidden;
+    height: 100%;
+    padding: 4px 0;
+}
+
+.poll > .participants > div > .statistics > .textual {
+    color: white;
+    overflow: hidden;
+}
+
+.poll > .participants > div > .statistics > .textual > .title {
+    font-size: 14px;
+    float: left;
+}
+
+.poll > .participants > div > .statistics > .textual > .votes {
+    float: right;
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+.poll > .participants > div > .statistics > .progress {
+    margin-top: 9px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.poll > .participants > div > .statistics > .progress > .filled {
+    height: 8px;
+    border-radius: 3px;
+}
+
+.poll > .participants > div > .statistics > .progress > .filled.la-dodgers {
+    background-color: #648EDE;
+}
+
+.poll > .participants > div > .statistics > .progress > .filled.miami-marlins {
+    background-color: #8EE2C3;
+}
